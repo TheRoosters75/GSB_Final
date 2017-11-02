@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 oct. 2017, 14:29:36
+    Author     : cleme
+*/
+
+
+#divGenerale
+{
+    border:medium yellow inset;
+    width: 1050px;
+    height: 300px;
+    margin: 0px auto 0px auto;
+    position: relative;
+}   
+    
+.section
+{
+    border:medium yellow inset;
+    width: 250px;
+    height: 300px;
+    margin: 0px auto 0px auto;
+    position: relative;
+    float: left;
+}
+#partieGauche
+{
+    height: 1500px;
+    width: 300px;
+    float: left;
+}
+#partieDroite
+{
+  height: 1500px;
+    width: 300px;
+    float: right;   
+}
