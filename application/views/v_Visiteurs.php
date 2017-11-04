@@ -14,6 +14,23 @@ and open the template in the editor.
          <script type="text/javascript" src="<?php echo base_url();?>JS/lesFonctions.js"></script>
          <script type="text/javascript">
          
+         
+         
+             $
+           (
+               function()
+                {
+                    
+                    
+                    // Au chargement de la page
+                        getLesRegions();
+                        
+                        
+                   }
+
+
+            ),
+            
              $
            (
                function()
@@ -44,6 +61,7 @@ and open the template in the editor.
         
     </head>
     <body>
+        <div id="visiteur">
         <div id="partieGauche">  
      <p>Tableau de tous les visiteurs existants </p>
         <label>CLiquer sur un matricule pour acceder au formulaire du visiteur voulus</label>
@@ -84,9 +102,17 @@ and open the template in the editor.
         
         <br> <br>   
         <a href="http://localhost/GSB/index.php"><input type="button" value="retour a la page d'accueil"></a>
+        <br> <br>
+           
         </div> 
         
+        
+            
+        
+            
         <div id="partieDroite">
+            
+         
             
             <p>formualire ajout de visiteurs</p>
             
@@ -119,11 +145,12 @@ and open the template in the editor.
             
             <form method="post">
             
-            
+                <a href="http://localhost/GSB/index.php/Ctrl_Accueil/AfficherVisiteurs"><input type="button" value="vider les cases "></a>
            <!-- creation des text box et bouton -->
                     <div class="form-group">
                         <label for="Matricule">Matricule</label>
                         <input type="text" id="matricule" name="matricule">
+                        
                     </div>
             
                     <div class="form-group">
@@ -178,6 +205,11 @@ and open the template in the editor.
            <div id="delete">
                <input type="submit" name="delete" value="Delete"/>
            </div>
+           <br> <br> <br>
+           
+           <label> Modification de regions</label>
+           <div id="divRegions"></div>
+           
            <!--Fonction d'ajout dans la base de donnée/tableau     -->
                 <?php 
                 
@@ -288,5 +320,6 @@ and open the template in the editor.
             
             </form>
         </div>
+            </div>
     </body>
 </html>

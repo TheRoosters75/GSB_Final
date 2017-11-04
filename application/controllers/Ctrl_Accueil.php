@@ -16,12 +16,11 @@ class Ctrl_Accueil extends CI_Controller{
         $this->load->view('v_Visiteurs',$data);   
     }
     
-     function getVueFormulaire(){
+     function getLesRegions(){
          
-        $codeVisiteur = $this->uri->segment(3);
-        $this->load->model("Model_FormulaireVisiteurs");   
-        $data['visiteur'] = $this->Model_FormulaireVisiteurs->getVisiteurById($codeVisiteur);  
-       $this->load->view('v_FormulaireVisiteurs',$data);
+        $this->load->model('Model_Regions');   
+        $data['lesRegions'] = $this->Model_Regions->getLesRegions();  
+        $this->load->view('v_Regions',$data);
         }
         
         
