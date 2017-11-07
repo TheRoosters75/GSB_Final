@@ -10,8 +10,13 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="http://localhost/GSB/CSS/CSS.css"> 
+         <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
          <script type="text/javascript" src="<?php echo base_url();?>JQuery/jquery-3.1.1.js"></script>
          <script type="text/javascript" src="<?php echo base_url();?>JS/lesFonctions.js"></script>
+         
          <script type="text/javascript">
          
          
@@ -61,15 +66,17 @@ and open the template in the editor.
         
     </head>
     <body>
+        <div class="row">
         <div id="visiteur">
+            
+            <div class="col-sm-6">
         <div id="partieGauche">  
-     <p>Tableau de tous les visiteurs existants </p>
-        <label>CLiquer sur un matricule pour acceder au formulaire du visiteur voulus</label>
-        
+            <h1>Tableau des visiteurs</h1>
+       
         
     
        
-    <table cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
+    <table class="table table-striped" cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
         <caption><h4>Listes des visiteurs</h4></caption>
         <tr> 
             
@@ -101,7 +108,11 @@ and open the template in the editor.
         
         
         <br> <br>   
-        <a href="http://localhost/GSB/index.php"><input type="button" value="retour a la page d'accueil"></a>
+        <ul class="pager">
+  <li class="previous"><a href="http://localhost/GSB/index.php">Previous</a></li>
+  
+</ul>
+       <!-- <a href="http://localhost/GSB/index.php"><input type="button" value="retour a la page d'accueil"></a>-->
         <br> <br>
            
         </div> 
@@ -109,14 +120,22 @@ and open the template in the editor.
         
             
         
+         </div>
             
+                <div class="col-sm-2">
+                    
+                </div>
+            
+            
+       <div class="col-sm-4">   
         <div id="partieDroite">
             
          
             
-            <p>formualire ajout de visiteurs</p>
-            
+            <h2>Formulaire Pour ajouter un visiteur , le modifier ou le supprimer</h2>
+            <br> 
             <!-- Affichage de la liste des visiteur dans un salect -->
+            <div class="form-group">
             <select id="lstVisiteurs">
                 <?php 
                 foreach ($lesVisiteurs as $visiteur ){
@@ -139,75 +158,88 @@ and open the template in the editor.
                 }
                 ?>
             </select>
+            <!--</div>--></div>
+            <br> 
             
             
             
             
             <form method="post">
             
-                <a href="http://localhost/GSB/index.php/Ctrl_Accueil/AfficherVisiteurs"><input type="button" value="vider les cases "></a>
+                <a href="http://localhost/GSB/index.php/Ctrl_Accueil/AfficherVisiteurs"><input type="button" class="btn btn-danger" value="vider les cases "></a> <br> <br>
            <!-- creation des text box et bouton -->
                     <div class="form-group">
                         <label for="Matricule">Matricule</label>
-                        <input type="text" id="matricule" name="matricule">
+                        <input type="text" class="form-control" id="matricule" name="matricule">
                         
                     </div>
             
                     <div class="form-group">
                         <label for="Nom">Nom</label>
-                        <input type="text" id="nom" name="nom">
+                        <input type="text" class="form-control" id="nom" name="nom">
                     </div>
             
                     <div class="form-group">
                         <label for="Penom">Prenom </label>
-                        <input type="text" id="prenom" name="prenom">
+                        <input type="text" class="form-control" id="prenom" name="prenom">
                     </div>
             
                     <div class="form-group">
                         <label for="Adresse">adresse </label>
-                        <input type="text" id="adresse" name="adresse">
+                        <input type="text" class="form-control" id="adresse" name="adresse">
                     </div>
             
                     <div class="form-group">
                         <label for="CP">Code Postale </label>
-                        <input type="text" id="cp" name="cp">
+                        <input type="text" class="form-control" id="cp" name="cp">
                     </div>
             
                     <div class="form-group">
                         <label for="Villes">Ville </label>
-                        <input type="text" id="ville" name="ville">
+                        <input type="text" class="form-control" id="ville" name="ville">
                     </div>
             
                     <div class="form-group">
                         <label for="DateEmbauche">La date d'embauche </label>
-                        <input type="text" id="dateEmbauche" name="dateEmbauche">
+                        <input type="text" class="form-control" id="dateEmbauche" name="dateEmbauche">
                     </div>
             
                     <div class="form-group">
                         <label for="codeSec">Code du secteur </label>
-                        <input type="text" id="codeSec" name="codeSec">
+                        <input type="text" class="form-control" id="codeSec" name="codeSec">
                     </div>
                     
                     <div class="form-group">
                         <label for="codeLab">Code du laboratoire </label>
-                        <input type="text" id="codeLab" name="codeLab">
+                        <select  class="form-control" id="codeLab" name="codeLab">
+                          <?php 
+                foreach ($lesLabos as $labo ){
+                ?> 
+                <option value="<?php echo $labo->LAB_CODE;?>"> <?php echo $labo->LAB_NOM;?></option>
+                <?php
+                }
+                ?>  
+                        </select>    
                     </div>
-            
+    <div class="container">        
+       <div  >
            
             <div id="ajouter"> 
-                <input type="submit" name="insert" value="INSERTTTT" />
+                <input type="submit" name="insert" value="INSERTTTT" class="btn btn-primary" />
             </div>
            
            <div id="update">
-               <input type="submit" name="update" value="Update" />
+               <input type="submit" name="update" value="Update" class="btn btn-success" />
            </div>
            
            <div id="delete">
-               <input type="submit" name="delete" value="Delete"/>
+               <input type="submit" name="delete" value="Delete" class="btn btn-danger" />
            </div>
+        </div> 
+    </div>
            <br> <br> <br>
            
-           <label> Modification de regions</label>
+         
            <div id="divRegions"></div>
            
            <!--Fonction d'ajout dans la base de donnée/tableau     -->
@@ -317,8 +349,9 @@ and open the template in the editor.
            
            
      
-            
-            </form>
+   </form>
+ </div>
+            </div>     
         </div>
             </div>
     </body>

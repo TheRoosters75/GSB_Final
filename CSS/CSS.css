@@ -9,24 +9,9 @@ and open the template in the editor.
 */
 
 
-#divGenerale
-{
-    border:medium yellow inset;
-    width: 1050px;
-    height: 300px;
-    margin: 0px auto 0px auto;
-    position: relative;
-}   
+
     
-.section
-{
-    border:medium yellow inset;
-    width: 250px;
-    height: 300px;
-    margin: 0px auto 0px auto;
-    position: relative;
-    float: left;
-}
+
 #visiteur
 {
  width: 1000px;
@@ -46,8 +31,16 @@ and open the template in the editor.
 #partieDroite
 {
   height: 500px;
-  width: 300px;
+  width: 700px;
   position: relative;
-  float: right;
+  float: left;
       
+}
+.table
+{
+    
+}
+.imagesB
+{
+    align-items:  center;
 }
