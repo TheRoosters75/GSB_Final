@@ -67,7 +67,7 @@ and open the template in the editor.
                 <li>insérer la région dans laquelle travaille un visiteur</li>
                 <li>avoir des statistiques sous forme d'indicateur (nombres, pourcentages, graphiques, …)</li>   
              </ul>   
-            <br> 
+            <br> <br>
               <a href="index.php/Ctrl_Accueil/AfficherVisiteurs"> <br> <br><input type="button" class="btn btn-info" name="consulter " value="Consulter"/></a>         
         </div>
         
