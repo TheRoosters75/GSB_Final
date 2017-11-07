@@ -67,7 +67,7 @@ and open the template in the editor.
                 <li>insérer la région dans laquelle travaille un visiteur</li>
                 <li>avoir des statistiques sous forme d'indicateur (nombres, pourcentages, graphiques, …)</li>   
              </ul>   
-            <br>
+            <br> 
               <a href="index.php/Ctrl_Accueil/AfficherVisiteurs"> <br> <br><input type="button" class="btn btn-info" name="consulter " value="Consulter"/></a>         
         </div>
         
@@ -84,7 +84,7 @@ and open the template in the editor.
                 
                 
             </ul>
-            <br> <br>
+            
              <a href="index.php/Ctrl_Accueil/AfficherComposants"><input type="button" class="btn btn-info" name="consulter " value="Consulter"/></a>  
         </div>
         
@@ -98,7 +98,7 @@ and open the template in the editor.
                 <li>Insérer dans quelle(s) activité(s) complémentaire(s) a été invité un praticien</li>
                 <li>Avoir des statistiques sous forme d’indicateurs (nombres, pourcentages, graphiques, ...)<li>
             </ul>
-            <br>
+            
              <a href="index.php/Ctrl_Accueil/AfficherPracticiens"><input type="button" class="btn btn-info" name="consulter " value="Consulter"/></a>  
         </div>
     </div>

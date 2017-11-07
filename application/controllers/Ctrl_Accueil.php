@@ -15,6 +15,8 @@ class Ctrl_Accueil extends CI_Controller{
         $data['lesVisiteurs'] = $this->Model_Visiteurs->getLesVisiteurs();
         $this->load->model('Model_Labo');
         $data['lesLabos'] = $this->Model_Labo->getAllLabo();
+        $this->load->model('Model_Secteur');
+        $data['lesSecteurs'] = $this->Model_Secteur->getAllSec();
         
         $this->load->view('v_Visiteurs',$data);   
     }

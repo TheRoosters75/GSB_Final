@@ -135,8 +135,9 @@ and open the template in the editor.
             <h2>Formulaire Pour ajouter un visiteur , le modifier ou le supprimer</h2>
             <br> 
             <!-- Affichage de la liste des visiteur dans un salect -->
-            <div class="form-group">
-            <select id="lstVisiteurs">
+            <div class="form-group row">
+                 <div class="col-xs-4">
+                <select class="form-control" id="lstVisiteurs">
                 <?php 
                 foreach ($lesVisiteurs as $visiteur ){
                 ?> 
@@ -158,8 +159,7 @@ and open the template in the editor.
                 }
                 ?>
             </select>
-            <!--</div>--></div>
-            <br> 
+                 </div></div> 
             
             
             
@@ -168,48 +168,73 @@ and open the template in the editor.
             
                 <a href="http://localhost/GSB/index.php/Ctrl_Accueil/AfficherVisiteurs"><input type="button" class="btn btn-danger" value="vider les cases "></a> <br> <br>
            <!-- creation des text box et bouton -->
-                    <div class="form-group">
+                    <div class="form-group row">
+                        <div class="col-xs-4">
                         <label for="Matricule">Matricule</label>
                         <input type="text" class="form-control" id="matricule" name="matricule">
-                        
+                        </div>
                     </div>
             
-                    <div class="form-group">
+                    <div class="form-group row">
+                         <div class="col-xs-4">
                         <label for="Nom">Nom</label>
                         <input type="text" class="form-control" id="nom" name="nom">
                     </div>
+                    </div>
             
-                    <div class="form-group">
+                    <div class="form-group row">
+                         <div class="col-xs-4">
                         <label for="Penom">Prenom </label>
                         <input type="text" class="form-control" id="prenom" name="prenom">
                     </div>
+                    </div>
             
-                    <div class="form-group">
+                    <div class="form-group row">
+                         <div class="col-xs-4">
                         <label for="Adresse">adresse </label>
                         <input type="text" class="form-control" id="adresse" name="adresse">
                     </div>
+                    </div>
             
-                    <div class="form-group">
+                    <div class="form-group row">
+                         <div class="col-xs-4">
                         <label for="CP">Code Postale </label>
                         <input type="text" class="form-control" id="cp" name="cp">
                     </div>
-            
-                    <div class="form-group">
+                    </div>
+                        
+                    <div class="form-group row">
+                         <div class="col-xs-4">
                         <label for="Villes">Ville </label>
                         <input type="text" class="form-control" id="ville" name="ville">
                     </div>
+                    </div>
             
-                    <div class="form-group">
+                    <div class="form-group row">
+                         <div class="col-xs-4">
                         <label for="DateEmbauche">La date d'embauche </label>
                         <input type="text" class="form-control" id="dateEmbauche" name="dateEmbauche">
                     </div>
+                    </div>
             
-                    <div class="form-group">
+                    <div class="form-group row">
+                         <div class="col-xs-4">
                         <label for="codeSec">Code du secteur </label>
-                        <input type="text" class="form-control" id="codeSec" name="codeSec">
+                        <select  class="form-control" id="codeSec" name="codeSec">
+                            <?php
+                                            foreach ($lesSecteurs as $secteur) {
+                                           ?>
+                            <option value="<?php echo $secteur->SEC_CODE;?>"> <?php echo $secteur->SEC_LIBELLE;?></option>   
+                                                 
+                            <?php
+                                            } 
+                           ?>  
+                        </select>     
+                         </div>
                     </div>
                     
-                    <div class="form-group">
+                    <div class="form-group row">
+                         <div class="col-xs-4">
                         <label for="codeLab">Code du laboratoire </label>
                         <select  class="form-control" id="codeLab" name="codeLab">
                           <?php 
@@ -221,19 +246,27 @@ and open the template in the editor.
                 ?>  
                         </select>    
                     </div>
+                    </div>
+                        
     <div class="container">        
        <div  >
            
-            <div id="ajouter"> 
-                <input type="submit" name="insert" value="INSERTTTT" class="btn btn-primary" />
+            <div class="form-group row" id="ajouter"> 
+                <div class="col-xs-2">
+                <input type="submit" name="insert" value="INSERTTTT" class="btn btn-primary btn-block" />
+                </div>
             </div>
            
-           <div id="update">
-               <input type="submit" name="update" value="Update" class="btn btn-success" />
+           <div class="form-group row" id="update">
+               <div class="col-xs-2">
+               <input type="submit" name="update" value="Update" class="btn btn-success btn-block" />
+               </div>
            </div>
            
-           <div id="delete">
-               <input type="submit" name="delete" value="Delete" class="btn btn-danger" />
+           <div class="form-group row" id="delete">
+               <div class="col-xs-2">
+               <input type="submit" name="delete" value="Delete" class="btn btn-danger btn-block" />
+               </div>
            </div>
         </div> 
     </div>
