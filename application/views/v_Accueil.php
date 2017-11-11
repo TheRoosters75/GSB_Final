@@ -84,7 +84,7 @@ and open the template in the editor.
                 
                 
             </ul>
-            
+            <br>
              <a href="index.php/Ctrl_Accueil/AfficherComposants"><input type="button" class="btn btn-info" name="consulter " value="Consulter"/></a>  
         </div>
         
@@ -96,7 +96,7 @@ and open the template in the editor.
                     
                 <li>lister pour un praticien la liste de ses spécialités</li>
                 <li>Insérer dans quelle(s) activité(s) complémentaire(s) a été invité un praticien</li>
-                <li>Avoir des statistiques sous forme d’indicateurs (nombres, pourcentages, graphiques, ...)<li>
+                <li>Avoir des statistiques sous forme d’indicateurs (nombres, pourcentages, graphiques, ...)</li>
             </ul>
             
              <a href="index.php/Ctrl_Accueil/AfficherPracticiens"><input type="button" class="btn btn-info" name="consulter " value="Consulter"/></a>  
