@@ -2,7 +2,7 @@ function  getLesRegions(){
     $.ajax(
         {  
             type:"get",
-            url:"http://localhost/GestionDesComposants/index.php/Ctrl_Accueil/getLesRegions",
+            url:"http://localhost/GSB/index.php/Ctrl_Accueil/getLesRegions",
            
              success:function(data)
             {
@@ -21,7 +21,7 @@ function  MAJRegion(){
     $.ajax(
         {  
             type:"get",
-            url:"http://localhost/GestionDesComposants/index.php/Ctrl_Accueil/MAJRegion",
+            url:"http://localhost/GSB/index.php/Ctrl_Accueil/MAJRegion",
            data:"codeR="+$('#codeRegion').val()+"&codeS="+$('#codeSecteur').val()+"&nomR="+$('#nomRegion').val(),
              success:function(data)
             {
@@ -40,7 +40,7 @@ function  getLesComposants(){
     $.ajax(
         {
             type:"get",
-            url:"http://localhost/GestionDesComposants/index.php/Ctrl_AccueilSF/getLesComposants",
+            url:"http://localhost/GSB/index.php/Ctrl_AccueilSF/getLesComposants",
 
             success:function(data)
             {

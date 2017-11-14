@@ -54,7 +54,5 @@ $route['Ctrl_Accueil/'] = 'Ctrl_Accueil';
 $route['Ctrl_AccueilSF/'] = 'Ctrl_AccueilSF';
 
 
-
-
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
