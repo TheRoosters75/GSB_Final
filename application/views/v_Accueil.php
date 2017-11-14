@@ -54,7 +54,7 @@ and open the template in the editor.
             <li>créer une liste de médicaments non conseillés</li>
             </ul>  
             <br> <br> <br>
-            <a href="index.php/Ctrl_Accueil/AfficherMedicaments"> <br><input type="button" class="btn btn-info" name="consulter " value="Consulter"/></a>
+            <a href="index.php/Ctrl_General/AfficherMedicaments"> <br><input type="button" class="btn btn-info" name="consulter " value="Consulter"/></a>
 
            </div>
         
@@ -85,7 +85,7 @@ and open the template in the editor.
                 
             </ul>
             <br>
-             <a href="index.php/Ctrl_Accueil/AfficherComposants"><input type="button" class="btn btn-info" name="consulter " value="Consulter"/></a>  
+             <a href="index.php/Ctrl_General/AfficherComposants"><input type="button" class="btn btn-info" name="consulter " value="Consulter"/></a>  
         </div>
         
         <div class="col-sm-3">
@@ -99,7 +99,7 @@ and open the template in the editor.
                 <li>Avoir des statistiques sous forme d’indicateurs (nombres, pourcentages, graphiques, ...)</li>
             </ul>
             
-             <a href="index.php/Ctrl_Accueil/AfficherPracticiens"><input type="button" class="btn btn-info" name="consulter " value="Consulter"/></a>  
+             <a href="index.php/Ctrl_General/AfficherPracticiens"><input type="button" class="btn btn-info" name="consulter " value="Consulter"/></a>  
         </div>
     </div>
         </div><!--div row -->

@@ -1,13 +1,8 @@
 <?php
 class Ctrl_Accueil extends CI_Controller{
    
-    function index(){
-        $this->load->view('v_Accueil');
-    }
+  
     
-    function AfficherMedicaments(){
-        $this->load->view('v_Medicaments');
-    }
     
     function AfficherVisiteurs(){
         
@@ -45,11 +40,5 @@ class Ctrl_Accueil extends CI_Controller{
         }
         
         
-    function AfficherComposants(){
-     $this->load->view('v_Composants');
-     
-    }
-    function AfficherPracticiens(){
-        $this->load->view('v_Practiciens');
-    }
+   
 }
