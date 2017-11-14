@@ -1,8 +1,46 @@
+function  getLesRegions(){
+    $.ajax(
+        {  
+            type:"get",
+            url:"http://localhost/GestionDesComposants/index.php/Ctrl_Accueil/getLesRegions",
+           
+             success:function(data)
+            {
+               
+                $('#divRegions').append(data);
+            },
+            error:function()
+            {
+                alert('Erreur SQL');
+            }
+        }
+        );
+}
+
+function  MAJRegion(){
+    $.ajax(
+        {  
+            type:"get",
+            url:"http://localhost/GestionDesComposants/index.php/Ctrl_Accueil/MAJRegion",
+           data:"codeR="+$('#codeRegion').val()+"&codeS="+$('#codeSecteur').val()+"&nomR="+$('#nomRegion').val(),
+             success:function(data)
+            {
+               alert("Modification ok");
+                //$('#divRegions').append(data);
+            },
+            error:function()
+            {
+                alert('Erreur MODIFICATION');
+            }
+        }
+        );
+}
+
 function  getLesComposants(){
     $.ajax(
         {
             type:"get",
-            url:"index.php/Ctrl_AccueilSF/getLesComposants",
+            url:"http://localhost/GestionDesComposants/index.php/Ctrl_AccueilSF/getLesComposants",
 
             success:function(data)
             {

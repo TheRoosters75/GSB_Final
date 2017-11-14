@@ -1,7 +1,7 @@
 <?php
 
 class Ctrl_AccueilSF extends CI_Controller{
-    public function index(){
+    public function AfficherComposants(){
        $this->load->model('Model_TableauMedicamentSF');
        $data ['lesMedicaments'] = $this->Model_TableauMedicamentSF->getLesMedicaments();
         $this->load->view('v_AccueilSF',$data);
