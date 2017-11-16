@@ -20,19 +20,10 @@
     <body>        
         <h1>Gestion des composants</h1>
         
+        
         <div id="divComposants"></div>
-  
-        <p>Code composant</p> <input type="text">
-        
-        <p>Nom Composant</p> <input type="text">
-        
-        <br> <br>
-        <input type="button" value="Modifier composant" id="modifier">
-        <br><br><br><br>  <br><br>
-      
-      
         <div id="Tableau" align="left">
-            
+        
         
     
        
@@ -52,7 +43,7 @@
         foreach($lesMedicaments as $medicament){
             echo "<tr>";
            
-            echo"<td> <a href='index.php/Ctrl_AccueilSF/getLesMedicaments'>".$medicament->MED_DEPOTLEGAL."</a></td>";
+            echo"<td>".$medicament->MED_DEPOTLEGAL."</td>";
             echo"<td>".$medicament->MED_NOMCOMMERCIAL."</td>";
             echo"<td>".$medicament->MED_COMPOSITION."</td>";
             
@@ -64,6 +55,7 @@
            
     </table> 
             </div>
+
     </body>
 </html>
 
@@ -136,7 +128,7 @@ and open the template in the editor.
            
         </tr>    
        
-        <?php 
+        php 
         
         foreach($lesVisiteurs as $visiteur){
             echo "<tr>";
@@ -149,7 +141,7 @@ and open the template in the editor.
             
             echo "</tr>";
         }
-        ?>
+        
            
     </table> 
             </div>
