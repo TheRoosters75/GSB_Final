@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Modification des regions</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- CSS -->
@@ -35,7 +35,7 @@ and open the template in the editor.
                     $('#codeRegion').val($('#lstRegions').val());
                     $('#nomRegion').val($('#lstRegions option:selected').attr('name'));
                     $('#codeSecteur').val($('#lstRegions option:selected').attr('name2'));
-                 $('#btnMAJ').click(MAJRegion);
+                
                    
 
 
@@ -47,11 +47,10 @@ and open the template in the editor.
         <!--JavaScript -->
     </head>
     <body>
-        <form method="post">
-            
-            <h2>Modifier Le Nom d'une Région</h2>
+      
+          <h2>Modifier Le Nom d'une Région</h2>
             <div class="form-group row">
-                <div class="col-xs-6">
+                <div class="col-xs-4">
             <select class="form-control" id="lstRegions">
                 <?php
                 foreach ($lesRegions as $region){
@@ -75,49 +74,66 @@ and open the template in the editor.
             }
             ?>
                  </select> 
+                </div>
             </div>
-            </div>
+          <form method="post">
+     <div class="form-group row">
+                        <div class="col-xs-4">
+                        <label for="codeRegion">Code Region :</label>
+                        <input type="text" class="form-control" id="codeRegion" name="codeRegion" >
+                        </div>
+                    </div>
+                    
             
+                    <div class="form-group row">
+                         <div class="col-xs-4">
+                        <label for="codeSecteur">Nom</label>
+                        <input type="text" class="form-control" id="codeSecteur" name="codeSecteur" >
+                    </div>
+                    </div>
             
+                    <div class="form-group row">
+                         <div class="col-xs-4">
+                        <label for="nomRegion">Prenom </label>
+                        <input type="text" class="form-control" id="nomRegion" name="nomRegion" >
+                    </div>
+                    </div>
+      
+           <div class="form-group row" >
+               <div class="col-xs-4">
+                   <input type="submit" name="update" value="Update" class="btn btn-success btn-block" />
+               </div>
+           </div>   
+        
+          <?php 
+               if($this->input->post('update') != ''){
+        $codeRegion = $this->input->post('codeRegion');
+        $codeSecteur = $this->input->post('codeSecteur');
+        $nomRegion = $this->input->post('nomRegion');
+        $data = array(
+        'REG_CODE' => $codeRegion,
+        'SEC_CODE' => $codeSecteur,
+        'REG_NOM'  => $nomRegion,
+    );
+        $this->db->set('REG_CODE',$codeRegion);
+        $this->db->set('SEC_CODE',$codeSecteur);
+        $this->db->set('REG_CODE',$nomRegion);
+        $this->db->where('REG_CODE', $codeRegion);
+        
+         $this->db->update('region',$data);
+         header("refresh: 0;");
+         
+     
 
-            
-            <div class="form-group row">
-                <div class="col-xs-6">
-                <label>Code region:</label> 
-                <input type="text" class="form-control" id="codeRegion" name="codeRegion" disabled="" >
-                </div>
-            </div>
-            
-            <div class="form-group row">
-                <div class="col-xs-6">
-                <label>Secteur :</label>
-                <input type="text" class="form-control" id="codeSecteur" name="codeSecteur" disabled="" >
-            </div>
-            </div>
-            
-            
-            
-            
-            <div class="form-group row">
-                
-                <div class="col-xs-6">
-                <label>Nom de la region :</label>
-                <input type="text" class="form-control" id="nomRegion" name="nomRegion"/>
-                </div>
-            </div>
-            
-            
-            
-            
-            <div id="update2">
-                <input type="submit" id="btnMAJ" class="btn btn-primary btn-md" name="update2" value="Mettre à Jour"  />
-           </div>
+    
+    }
              
-            <!-- fonction de mise a jour des regions -->
+           
+           
+           ?>
+                
+                        
+            </form>     
             
-          
-            
-          
-        </form>   
     </body>
 </html>
