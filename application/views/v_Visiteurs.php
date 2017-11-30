@@ -59,6 +59,7 @@ and open the template in the editor.
         
     </head>
     <body>
+         <img src="Images/medicament.jpg" id="img" alt="medicament">
         <div class="row">
         <div id="visiteur">
             

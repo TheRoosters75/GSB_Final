@@ -25,9 +25,13 @@ class Ctrl_Accueil extends CI_Controller{
         $this->load->view('v_Regions',$data);
         }
         function StatistiquesVisiteurs(){
+            $this->load->model('Model_Visiteurs');
+            $data['lesVisiteurs'] = $this->Model_Visiteurs->getLesVisiteurs();  
             $this->load->view('v_StatsVisiteurs');
+            
         }
         
+      
         
    }
 

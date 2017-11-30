@@ -11,6 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="../../JQuery/jquery-3.1.1.js"></script>
     <script type="text/javascript">
 
       // Load the Visualization API and the corechart package.
@@ -29,11 +30,11 @@ and open the template in the editor.
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-          ['Bretagne', 3],
-          ['PACA', 1],
-          ['Olives', 1],
-          ['Zucchini', 1],
-          ['Pepperoni', 2]
+          ['NORD', 3],
+          ['SUD', 1],
+          ['EST', 1],
+          ['OUEST', 1],
+          
         ]);
 
         // Set chart options
@@ -46,9 +47,42 @@ and open the template in the editor.
         chart.draw(data, options);
       }
     </script>
+     <script type="text/javascript">
+         var automate;
+         $
+        (
+            function()
+            {
+                automate = setTimeout('boutonText()',0001);
+            }
+         );
+         
+         function boutonText()
+         {
+             $('#btn').val("ALLAHU");
+             
+             automate = setTimeout('boutonSammy()',2000);
+         }
+         function boutonSammy()
+         {
+             $('#btn').val("AKBAR");
+            
+             
+             automate = setTimeout('boutonText()',2000);
+         }
+         </script>
     </head>
     <body>
          <!--Div that will hold the pie chart-->
     <div id="chart_div"></div>
+     <input id="btn" type="button" value="ALLAHU">
+     <br> <br> <br>
+    
     </body>
 </html>
+
+
+
+
+        
+        
