@@ -47,30 +47,7 @@ and open the template in the editor.
         chart.draw(data, options);
       }
     </script>
-     <script type="text/javascript">
-         var automate;
-         $
-        (
-            function()
-            {
-                automate = setTimeout('boutonText()',0001);
-            }
-         );
-         
-         function boutonText()
-         {
-             $('#btn').val("ALLAHU");
-             
-             automate = setTimeout('boutonSammy()',2000);
-         }
-         function boutonSammy()
-         {
-             $('#btn').val("AKBAR");
-            
-             
-             automate = setTimeout('boutonText()',2000);
-         }
-         </script>
+    
     </head>
     <body>
          <!--Div that will hold the pie chart-->
