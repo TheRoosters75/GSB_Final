@@ -10,31 +10,24 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="http://localhost/GSB/CSS/CSS.css"> 
-        <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="<?php echo base_url();?>JQuery/jquery-3.1.1.js"></script>
-        <script type="text/javascript" src="<?php echo base_url();?>JS/lesFonctions.js"></script>
-        <script type="text/javascript">
-         
-         
-         
-             $
-           (
-               function()
-                {
-                    
-                    
-                    // Au chargement de la page
-                        getLesRegions();
-                        
-                        
-                   }
+         <!--<link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">-->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+        
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+         <script type="text/javascript" src="<?php echo base_url();?>JQuery/jquery-3.1.1.js"></script>
+         <script type="text/javascript" src="<?php echo base_url();?>JS/lesFonctions.js"></script>
+         <script type="text/javascript">
+             $(document).ready(function(){
+              $('#myTable').DataTable();
+});
+         </script>
+         
+         <script type="text/javascript">
 
-            ),
-            
+           
              $
            (
                function()
@@ -57,7 +50,8 @@ and open the template in the editor.
                     });
                 }
              );
-      
+              
+ 
                     
          
         </script>
@@ -69,14 +63,13 @@ and open the template in the editor.
         <div id="visiteur">
             
             <div class="col-sm-6">
-        <div id="partieGauche">  
+        <div id="partieGauche"> 
+<!--        <div style="overflow:auto;height:570px;">-->
+
             <h1>Tableau des visiteurs</h1>
-       
+ 
+    <table id="myTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
         
-    
-       
-    <table class="table table-striped" cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
-        <caption><h4>Listes des visiteurs</h4></caption>
         <tr> 
             
               <th>Matricule</th>
@@ -103,15 +96,8 @@ and open the template in the editor.
            
     </table> 
               
-        
-        
-        
-        <br> <br>   
-        <ul class="pager">
-  <li class="previous"><a href="http://localhost/GSB/index.php">Previous</a></li>
-  
-</ul>
-       <!-- <a href="http://localhost/GSB/index.php"><input type="button" value="retour a la page d'accueil"></a>-->
+      
+   
         <br> <br>
            
         </div> 
@@ -135,7 +121,7 @@ and open the template in the editor.
             <br> 
             <!-- Affichage de la liste des visiteur dans un salect -->
             <div class="form-group row">
-                 <div class="col-xs-4">
+                 <div class="col-xs-6">
                 <select class="form-control" id="lstVisiteurs">
                 <?php 
                 foreach ($lesVisiteurs as $visiteur ){
@@ -168,56 +154,56 @@ and open the template in the editor.
                 <a href="http://localhost/GSB/index.php/Ctrl_Accueil/AfficherVisiteurs"><input type="button" class="btn btn-danger" value="vider les cases "></a> <br> <br>
            <!-- creation des text box et bouton -->
                     <div class="form-group row">
-                        <div class="col-xs-4">
+                        <div class="col-xs-6">
                         <label for="Matricule">Matricule</label>
                         <input type="text" class="form-control" id="matricule" name="matricule">
                         </div>
                     </div>
             
                     <div class="form-group row">
-                         <div class="col-xs-4">
+                         <div class="col-xs-6">
                         <label for="Nom">Nom</label>
                         <input type="text" class="form-control" id="nom" name="nom">
                     </div>
                     </div>
             
                     <div class="form-group row">
-                         <div class="col-xs-4">
+                         <div class="col-xs-6">
                         <label for="Penom">Prenom </label>
                         <input type="text" class="form-control" id="prenom" name="prenom">
                     </div>
                     </div>
             
                     <div class="form-group row">
-                         <div class="col-xs-4">
+                         <div class="col-xs-6">
                         <label for="Adresse">adresse </label>
                         <input type="text" class="form-control" id="adresse" name="adresse">
                     </div>
                     </div>
             
                     <div class="form-group row">
-                         <div class="col-xs-4">
+                         <div class="col-xs-6">
                         <label for="CP">Code Postale </label>
                         <input type="text" class="form-control" id="cp" name="cp">
                     </div>
                     </div>
                         
                     <div class="form-group row">
-                         <div class="col-xs-4">
+                         <div class="col-xs-6">
                         <label for="Villes">Ville </label>
                         <input type="text" class="form-control" id="ville" name="ville">
                     </div>
                     </div>
             
                     <div class="form-group row">
-                         <div class="col-xs-4">
+                         <div class="col-xs-6">
                         <label for="DateEmbauche">La date d'embauche </label>
                         <input type="text" class="form-control" id="dateEmbauche" name="dateEmbauche">
                     </div>
                     </div>
             
                     <div class="form-group row">
-                         <div class="col-xs-4">
+                         <div class="col-xs-6">
                         <label for="codeSec">Code du secteur </label>
                         <select  class="form-control" id="codeSec" name="codeSec">
                             <?php
@@ -233,7 +219,7 @@ and open the template in the editor.
                     </div>
                     
                     <div class="form-group row">
-                         <div class="col-xs-4">
+                         <div class="col-xs-6">
                         <label for="codeLab">Code du laboratoire </label>
                         <select  class="form-control" id="codeLab" name="codeLab">
                           <?php 
@@ -247,8 +233,8 @@ and open the template in the editor.
                     </div>
                     </div>
                         
-    <div class="container">        
-       <div  >
+    <div class="container">       <div  >  
+      
            
             <div class="form-group row" id="ajouter"> 
                 <div class="col-xs-2">
@@ -260,7 +246,7 @@ and open the template in the editor.
                <div class="col-xs-2">
                <input type="submit" name="update" value="Update" class="btn btn-success btn-block" />
                </div>
-           </div>
+           </div>   
            
            <div class="form-group row" id="delete">
                <div class="col-xs-2">
@@ -270,10 +256,32 @@ and open the template in the editor.
         </div> 
     </div>
            <br> <br> <br>
-           
-         
-           <div id="divRegions"></div>
-           
+            </form>     
+    
+          
+           <div class="form-group row">
+               <div class="col-xs-8">
+                   <h2>Modifications d'une region </h2>
+                   <a href="http://localhost/GSB/index.php/Ctrl_Accueil/getLesRegions" > <input type="button"  value="Modification Régions" class="btn btn-success btn-block" /></a>
+               </div>
+           </div>  
+             <div class="form-group row">
+               <div class="col-xs-8">
+                   <h2>Statistiques</h2>
+                   <a href="http://localhost/GSB/index.php/Ctrl_Accueil/StatistiquesVisiteurs" > <input type="button"  value="Modification Régions" class="btn btn-success btn-block" /></a>
+               </div>
+           </div>     
+        
+        
+        <br> 
+        <ul class="pager">
+             <li class="previous"><a href="http://localhost/GSB/index.php">Previous</a></li>
+  
+        </ul>
+          
+            
+            <!-- fonction de mise a jour des regions -->
+
            <!--Fonction d'ajout dans la base de donnée/tableau     -->
                 <?php 
                 
@@ -307,7 +315,7 @@ and open the template in the editor.
            <!-- Fonction de modification dans la BDD /Tableau -->
            <?php 
            
-           if($this->input->post('update') !=''  ){
+           if($this->input->post('update') !='' ){
             $matricule = $this->input->post('matricule'); 
                    $nom = $this->input->post('nom');
                    $prenom = $this->input->post('prenom');
@@ -377,11 +385,10 @@ and open the template in the editor.
                    header("refresh: 0;");
                 }
                 ?>
+    
+       
+   
            
-           
-           
-     
-   </form>
  </div>
             </div>     
         </div>

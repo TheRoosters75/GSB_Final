@@ -47,8 +47,8 @@
     <body>        
         <h1>Gestion des composants</h1>
         <div class="form-group row">
-                 <div class="col-xs-4">
-         <select id="lstComposants">
+          <div class="col-xs-4">
+            <select class="form-control" id="lstComposants">
                         <?php 
                         foreach ($lesComposants as $composant ){
                         ?> 
@@ -60,7 +60,7 @@
                         ?>
             </select>
                  </div></div>
-        
+        <form method="post">
 <!--        <p>Code composant</p> <input type="text" id="codeCompo">-->
         
                     <div class="form-group row">
@@ -75,11 +75,11 @@
                     <div class="form-group row">
                         <div class="col-xs-4">
                         <label for="Libelle">Nom Composant</label>
-                        <input type="text" class="form-control" id="libelleCompo" name="Libelle Composant">
+                        <input type="text" class="form-control" name="libelleCompo" id="libelleCompo" >
                         </div>
                     </div>
         <br> <br>
-        <input id="update" type="button" value="Modifier composant" name="update">
+        <input type="submit" name="update" value="Modifier composant">
                  
            <!-- Fonction de modification dans la BDD /Tableau -->
            <?php 
@@ -95,13 +95,12 @@
                      'CMP_LIBELLE' =>$libelleCompo,
                       
                   );
-                    $this->db->set('CMP_CODE', $codeCompo);
                     $this->db->set('CMP_LIBELLE', $libelleCompo);
                     
                     
                     $this->db->where('CMP_CODE', $codeCompo);
                     
-                    $this->db->update('libelleCompo', $data);
+                    $this->db->update('composant', $data);
                     
                     header("refresh: 0;");
              
@@ -109,12 +108,12 @@
            
            ?>
            
-        
+        </form>
            <br> <br>    
         <div id="Tableau" align="left">
-        <div class="col-sm-7">
+        <div class="col-sm-6">
 
-            <div style="overflow:auto;height:620px;">
+            <div style="overflow:auto;height:570px;">
        
     <table class="table table-striped" cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
         <caption>Listes des medicaments</caption>
