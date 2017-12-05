@@ -9,9 +9,7 @@ and open the template in the editor.
 */
 
 
-
-    
-
+   
 #visiteur
 {
  width: 1000px;
@@ -20,7 +18,7 @@ and open the template in the editor.
  
 }
 
-#partieGauche
+#partieGauche 
 {
     height: 500px;
     width: 500px;
@@ -38,6 +36,10 @@ and open the template in the editor.
 }
 .table
 {
+    height:200px;
+    width:200px;
+    position: relative;
+    float: left;
     
 }
 .imagesB

@@ -46,7 +46,8 @@
     
     <body>        
         <h1>Gestion des composants</h1>
-        
+        <div class="form-group row">
+                 <div class="col-xs-4">
          <select id="lstComposants">
                         <?php 
                         foreach ($lesComposants as $composant ){
@@ -58,11 +59,25 @@
                         }
                         ?>
             </select>
+                 </div></div>
         
-        <p>Code composant</p> <input type="text" id="codeCompo">
+<!--        <p>Code composant</p> <input type="text" id="codeCompo">-->
         
-        <p>Nom Composant</p> <input type="text" id="libelleCompo">
+                    <div class="form-group row">
+                        <div class="col-xs-4">
+                        <label for="Code Composant">Code Composant</label>
+                        <input type="text" class="form-control" id="codeCompo" name="Code Composant">
+                        </div>
+                    </div>
         
+<!--        <p>Nom Composant</p> <input type="text" id="libelleCompo">-->
+        
+                    <div class="form-group row">
+                        <div class="col-xs-4">
+                        <label for="Libelle">Nom Composant</label>
+                        <input type="text" class="form-control" id="libelleCompo" name="Libelle Composant">
+                        </div>
+                    </div>
         <br> <br>
         <input id="update" type="button" value="Modifier composant" name="update">
                  
@@ -93,18 +108,13 @@
            } 
            
            ?>
+           
         
-        
-        
-        
-        
-        
-        
-            
+           <br> <br>    
         <div id="Tableau" align="left">
-        <div class="col-sm-6">
+        <div class="col-sm-7">
 
-   
+            <div style="overflow:auto;height:620px;">
        
     <table class="table table-striped" cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
         <caption>Listes des medicaments</caption>
@@ -135,9 +145,13 @@
         
     
     </table> 
-            <ul class="pager">
-                <li class="previous"><a href="http://localhost/GSB/index.php">Previous</a></li>
-            </ul>
+           
+          </div>
+        
+        <ul class="pager">
+            <li class="previous"><a href="http://localhost/GSB/index.php">Previous</a></li>
+        </ul>
+        </div>
         </div>
     </body>
 </html>
