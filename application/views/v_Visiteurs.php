@@ -268,13 +268,13 @@ and open the template in the editor.
            <div class="form-group row">
                <div class="col-xs-8">
                    <h2>Modifications d'une region </h2>
-                   <a href="http://localhost/GSB_Final-BrancheClement/index.php/Ctrl_Accueil/getLesRegions" > <input type="button"  value="Modification Régions" class="btn btn-success btn-block" /></a>
+                   <a href="http://localhost/GSB_Final-BrancheClement-Local/index.php/Ctrl_Accueil/getLesRegions" > <input type="button"  value="Modification Régions" class="btn btn-success btn-block" /></a>
                </div>
            </div>  
              <div class="form-group row">
                <div class="col-xs-8">
                    <h2>Statistiques</h2>
-                   <a href="http://localhost/GSB_Final-BrancheClement/index.php/Ctrl_Accueil/StatistiquesVisiteurs" > <input type="button"  value="Modification Régions" class="btn btn-success btn-block" /></a>
+                   <a href="http://localhost/GSB_Final-BrancheClement-Local/index.php/Ctrl_Accueil/StatistiquesVisiteurs" > <input type="button"  value="Modification Régions" class="btn btn-success btn-block" /></a>
                </div>
            </div>  
           
