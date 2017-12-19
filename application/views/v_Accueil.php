@@ -35,7 +35,7 @@ and open the template in the editor.
          }
          function fadeClement()
          {
-             $('#titleVis').text("Clement");
+             $('#titleVis').text("Clément");
              $('#titleVis').fadeOut(3000);
              $('#titleVis').fadeToggle(3000);
              automate = setTimeout('fadeVisiteurs()',6000);
