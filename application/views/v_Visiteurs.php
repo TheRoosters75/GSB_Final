@@ -162,7 +162,6 @@ and open the template in the editor.
          
                 <a href="http://localhost/GSB/index.php/Ctrl_Accueil/AfficherVisiteurs"><input type="button" class="btn btn-danger" value="vider les cases "></a> <br> <br>
 
-                <a href="http://localhost/GSB/index.php/Ctrl_Accueil/AfficherVisiteurs"><input type="button" class="btn btn-danger" value="vider les cases "></a> <br> <br>
  
            <!-- creation des text box et bouton -->
                     <div class="form-group row">
@@ -285,11 +284,7 @@ and open the template in the editor.
            </div>     
         
         
-        <br> 
-        <ul class="pager">
-             <li class="previous"><a href="http://localhost/GSB/index.php">Previous</a></li>
-  
-        </ul>
+       
           
             
             <!-- fonction de mise a jour des regions -->
