@@ -67,7 +67,7 @@ and open the template in the editor.
 <!--        <div style="overflow:auto;height:570px;">-->
 
             <h1>Tableau des visiteurs</h1>
- 
+
     <table id="myTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
         
         <tr> 
@@ -101,7 +101,7 @@ and open the template in the editor.
         <br> <br>
            
         </div> 
-        
+       
         
             
         

@@ -1,3 +1,13 @@
+<?php
+session_start();
+if($this->input->post('update') !=''  )
+{
+    $_SESSION['num'] = $this->input->post('codeCompo');
+    $_SESSION['nom'] = $this->input->post('libelleCompo');
+}
+?>
+
+
 <html>
     <head>
         <title>Gestion des Composants</title>
@@ -12,20 +22,38 @@
         <script type="text/javascript" src="<?php echo base_url();?>JQuery/jquery-3.1.1.js"></script>
         <script type="text/javascript">
         
-             $
-           (
-               function()
-                {
-                    
-                    
-                    // Au chargement de la page
-                        getLesComposants();
-                        
-                        
-                   }
+//             $
+//           (
+//               function()
+//                {
+//                    
+//                    
+//                    // Au chargement de la page
+//                        getLesComposants();
+//                        
+//                        
+//                   }
+//
+//
+//            ),
+//          $
+//           (
+//               function()
+//                {
+//                    
+//                    $('#lstComposants').change(function(){
+//                      
+//                    $('#codeCompo').val($('#lstComposants').val());
+//                    $('#libelleCompo').val($('#lstComposants option:selected').attr('name'));
+//                   
+//
+//
+//                    });
+//                }
+//             );
+//______________________________________________________________________________
 
-
-            ),
+  
           $
            (
                function()
@@ -66,7 +94,7 @@
                     <div class="form-group row">
                         <div class="col-xs-4">
                         <label for="Code Composant">Code Composant</label>
-                        <input type="text" class="form-control" id="codeCompo" name="Code Composant">
+                        <input type="text" class="form-control" id="codeCompo" name="CodeComposant">
                         </div>
                     </div>
         
@@ -85,23 +113,22 @@
            <?php 
            
            if($this->input->post('update') !=''  ){
-            $codeCompo = $this->input->post('codeCompo'); 
-            $libelleCompo = $this->input->post('libelleCompo');
+//            $codeCompo = $this->input->post('codeCompo'); 
+//            $libelleCompo = $this->input->post('libelleCompo');
                  
-                   
-                   
-                    $data = array(
-                     'CMP_CODE' => $codeCompo,
-                     'CMP_LIBELLE' =>$libelleCompo,
-                      
-                  );
-                    $this->db->set('CMP_LIBELLE', $libelleCompo);
-                    
-                    
-                    $this->db->where('CMP_CODE', $codeCompo);
-                    
-                    $this->db->update('composant', $data);
-                    
+             
+//                    $data = array(
+//                     'CMP_CODE' => 1,
+//                     'CMP_LIBELLE' =>"dede",
+//                      
+//                  );
+//                    $this->db->set('CMP_LIBELLE', $libelleCompo);
+//                    
+//                    
+//                    $this->db->where('CMP_CODE', $codeCompo);
+//                    
+//                    $this->db->update('composant', $data);
+                    $this->db->query("update composant set cmp_libelle =  '".$_SESSION['nom']."' where cmp_code = ".$_SESSION['num']);
                     header("refresh: 0;");
              
            } 
@@ -113,7 +140,7 @@
         <div id="Tableau" align="left">
         <div class="col-sm-6">
 
-            <div style="overflow:auto;height:570px;">
+            <div style="overflow:auto;height:490px;">
        
     <table class="table table-striped" cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
         <caption>Listes des medicaments</caption>
