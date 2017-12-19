@@ -103,7 +103,12 @@ and open the template in the editor.
                <div class="col-xs-4">
                    <input type="submit" name="update" value="Update" class="btn btn-success btn-block" />
                </div>
-           </div>   
+           </div>  
+              
+       <ul class="pager">
+  <li class="previous"><a href="http://localhost/GSB_Final-BrancheClement-Local/index.php/Ctrl_Accueil/AfficherVisiteurs">Revenir a l'acceuil</a></li>
+  
+</ul>
         
           <?php 
                if($this->input->post('update') != ''){

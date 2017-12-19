@@ -175,7 +175,7 @@ if($this->input->post('update') !=''  )
           </div>
         
         <ul class="pager">
-            <li class="previous"><a href="http://localhost/GSB/index.php">Previous</a></li>
+            <li class="previous"><a href="http://localhost/GSB/index.php">Revenir a l'acceuil GSB</a></li>
         </ul>
         </div>
         </div>

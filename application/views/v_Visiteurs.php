@@ -22,7 +22,7 @@ and open the template in the editor.
          <script type="text/javascript">
              $(document).ready(function(){
               $('#myTable').DataTable();
-});
+            });
          </script>
          
          <script type="text/javascript">
@@ -59,6 +59,7 @@ and open the template in the editor.
         
     </head>
     <body>
+       
         <div class="row">
         <div id="visiteur">
             
@@ -96,7 +97,15 @@ and open the template in the editor.
            
     </table> 
               
-      
+ 
+        
+        
+        <br> <br>   
+       
+       <ul class="pager">
+  <li class="previous"><a href="http://localhost/GSB/">Revenir a l'acceuil GSB</a></li>
+  
+</ul>
    
         <br> <br>
            
@@ -117,7 +126,7 @@ and open the template in the editor.
             
          
             
-            <h2>Formulaire Pour ajouter un visiteur , le modifier ou le supprimer</h2>
+            <h2>Formulaire d'ajout,de modification ou de supression d'un visiteur</h2>
             <br> 
             <!-- Affichage de la liste des visiteur dans un salect -->
             <div class="form-group row">
@@ -150,8 +159,11 @@ and open the template in the editor.
             
             
             <form method="post">
-            
+         
                 <a href="http://localhost/GSB/index.php/Ctrl_Accueil/AfficherVisiteurs"><input type="button" class="btn btn-danger" value="vider les cases "></a> <br> <br>
+
+                <a href="http://localhost/GSB/index.php/Ctrl_Accueil/AfficherVisiteurs"><input type="button" class="btn btn-danger" value="vider les cases "></a> <br> <br>
+ 
            <!-- creation des text box et bouton -->
                     <div class="form-group row">
                         <div class="col-xs-6">
@@ -238,19 +250,19 @@ and open the template in the editor.
            
             <div class="form-group row" id="ajouter"> 
                 <div class="col-xs-2">
-                <input type="submit" name="insert" value="INSERTTTT" class="btn btn-primary btn-block" />
+                <input type="submit" name="insert" value="Creer" class="btn btn-primary btn-block" />
                 </div>
             </div>
            
            <div class="form-group row" id="update">
                <div class="col-xs-2">
-               <input type="submit" name="update" value="Update" class="btn btn-success btn-block" />
+               <input type="submit" name="update" value="Metre à jour" class="btn btn-success btn-block" />
                </div>
            </div>   
            
            <div class="form-group row" id="delete">
                <div class="col-xs-2">
-               <input type="submit" name="delete" value="Delete" class="btn btn-danger btn-block" />
+               <input type="submit" name="delete" value="Supprimer" class="btn btn-danger btn-block" />
                </div>
            </div>
         </div> 
@@ -293,7 +305,7 @@ and open the template in the editor.
                    $cp = $this->input->post('cp');
                    $ville = $this->input->post('ville');
                    $dateEmbauche = $this->input->post('dateEmbauche');
-                   $codeSec = $this->input->post('$codeSec');
+                   $codeSec = $this->input->post('codeSec');
                    $codeLab = $this->input->post('codeLab');
                    
                    $data = array(
@@ -323,7 +335,7 @@ and open the template in the editor.
                    $cp = $this->input->post('cp');
                    $ville = $this->input->post('ville');
                    $dateEmbauche = $this->input->post('dateEmbauche');
-                   $codeSec = $this->input->post('$codeSec');
+                   $codeSec = $this->input->post('codeSec');
                    $codeLab = $this->input->post('codeLab');
                    
                     $data = array(
@@ -366,7 +378,7 @@ and open the template in the editor.
                    $cp = $this->input->post('cp');
                    $ville = $this->input->post('ville');
                    $dateEmbauche = $this->input->post('dateEmbauche');
-                   $codeSec = $this->input->post('$codeSec');
+                   $codeSec = $this->input->post('codeSec');
                    $codeLab = $this->input->post('codeLab');
                    
                    $data = array(

@@ -1,62 +1,75 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>Statistiques</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <!--Load the AJAX API-->
+  <head>
+      
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="../../JQuery/jquery-3.1.1.js"></script>
     <script type="text/javascript">
-
-      // Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
       function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['NORD', 3],
-          ['SUD', 1],
-          ['EST', 1],
-          ['OUEST', 1],
-          
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          <?php
+          foreach ($qteLabo as $labo) {
+               echo"['".$labo->LAB_NOM."',".$labo->qte."],";
+              
+          }
+          ?>
         ]);
 
-        // Set chart options
-        var options = {'title':'Top 5 des regions avec le plus de visiteur',
-                       'width':400,
-                       'height':300};
+        var options = {
+          title: 'Le nombres de visiteurs en fonction de leurs laboratoires',
+          is3D: true,
+        };
 
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
         chart.draw(data, options);
       }
     </script>
     
-    </head>
-    <body>
-        <div id="chart_div"></div>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          <?php 
+          foreach ($qteSecteur as $secteur) {
+               echo"['".$secteur->SEC_LIBELLE."',".$secteur->Qte."],";
+              
+          }
+          ?>
+        ]);
+
+        var options = {
+          title: 'Le nombres de visiteurs en fonction de leurs localisation',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
     
-    </body>
+  </head>
+  <body>
+      <div class="row">
+          <div class="col-sm-6">
+          
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    </div>
+          <div class="col-sm-6">
+          
+        <div id="donutchart" style="width: 900px; height: 500px;"></div> 
+        </div>
+      </div>
+      
+       <ul class="pager">
+  <li class="previous"><a href="http://localhost/GSB_Final-BrancheClement-Local/index.php/Ctrl_Accueil/AfficherVisiteurs">Revenir a l'acceuil</a></li>
+  
+</ul>
+  </body>
 </html>
-
-
-
-
-        
-        
